@@ -21,16 +21,24 @@
         <module>ui</module>
         <module>db</module>
         <module>util</module>
+        <module>core</module>
     </modules>
 
     <properties>
-        <java.version>11</java.version>
+        <java.version>17</java.version>
+        <maven.compiler.release>17</maven.compiler.release>
         <spring-cloud-gcp.version>3.1.0</spring-cloud-gcp.version>
         <spring-cloud.version>2021.0.1</spring-cloud.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.22</version>
+                <scope>provided</scope>
+            </dependency>
             <dependency>
                 <groupId>io.vavr</groupId>
                 <artifactId>vavr</artifactId>
